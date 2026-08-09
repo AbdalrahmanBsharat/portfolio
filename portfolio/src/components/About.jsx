@@ -5,7 +5,7 @@ import SectionTitle from './SectionTitle';
 const stats = [
   { value: '5+',  label: 'Projects Built' },
   { value: '3+',  label: 'Tech Stacks' },
-  { value: '1+',  label: 'Years Coding' },
+  { value: '3+',  label: 'Years Coding' },
   { value: '2+',  label: 'Domains Covered' },
 ];
 
