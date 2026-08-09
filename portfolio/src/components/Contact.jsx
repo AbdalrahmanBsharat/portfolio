@@ -34,7 +34,7 @@ const contactInfo = [
   {
     icon: FiMapPin,
     label: 'Location',
-    value: 'Palestine',
+    value: 'Amman, Jordan',
     href: null,
     color: 'text-rose-400',
     bg: 'bg-rose-500/10',
