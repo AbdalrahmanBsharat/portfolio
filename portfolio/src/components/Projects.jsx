@@ -5,6 +5,52 @@ import SectionTitle from './SectionTitle';
 const projects = [
   {
     id: 1,
+    title: 'Triosuite Invoices',
+    emoji: '🧾',
+    badge: 'Full-Stack ERP',
+    badgeColor: 'bg-cyan-500/20 text-cyan-300 border-cyan-500/30',
+    description:
+      'End-to-end sales-invoice system: a Flutter client on a Spring Boot REST API over MySQL. Multi-currency with live re-pricing, tax-inclusive and tax-exclusive maths, server-side invoice numbering under row locks, JWT auth with role-based access, and barcode scanning — shipped with Docker, Flyway migrations and a four-job CI pipeline.',
+    tech: ['Flutter', 'Spring Boot', 'Java 21', 'MySQL', 'Docker', 'JWT / RBAC'],
+    techColors: ['bg-blue-500/15 text-blue-300', 'bg-green-500/15 text-green-300', 'bg-orange-500/15 text-orange-300', 'bg-cyan-500/15 text-cyan-300', 'bg-sky-500/15 text-sky-300', 'bg-violet-500/15 text-violet-300'],
+    github: 'https://github.com/AbdalrahmanBsharat',
+    gradient: 'from-cyan-600/20 to-teal-600/20',
+    border: 'border-cyan-500/20',
+    glow: 'hover:shadow-cyan-500/20',
+  },
+  {
+    id: 2,
+    title: 'Wahad',
+    emoji: '🌱',
+    badge: 'Web Platform',
+    badgeColor: 'bg-emerald-500/20 text-emerald-300 border-emerald-500/30',
+    description:
+      'Arabic-first (RTL) platform for an entrepreneurship and financial-literacy organization. Nine bespoke sections built on a hand-written design-token system, with a custom Vite plugin that prerenders the site to static HTML.',
+    tech: ['React 19', 'Vite', 'SSR Prerender', 'Arabic / RTL', 'Design Tokens'],
+    techColors: ['bg-cyan-500/15 text-cyan-300', 'bg-purple-500/15 text-purple-300', 'bg-emerald-500/15 text-emerald-300', 'bg-amber-500/15 text-amber-300', 'bg-blue-500/15 text-blue-300'],
+    github: 'https://github.com/AbdalrahmanBsharat',
+    live: 'https://wahadd.com',
+    gradient: 'from-emerald-600/20 to-amber-500/20',
+    border: 'border-emerald-500/20',
+    glow: 'hover:shadow-emerald-500/20',
+  },
+  {
+    id: 3,
+    title: 'Tameenak',
+    emoji: '🛡️',
+    badge: 'Insurance App',
+    badgeColor: 'bg-sky-500/20 text-sky-300 border-sky-500/30',
+    description:
+      'Insurance marketplace app spanning 36 screens: multi-step travel and property purchase journeys, camera-based KYC with ID scanning and selfie liveness, and full English/Arabic RTL localization on a custom design system.',
+    tech: ['Flutter', 'GetX', 'Dart', 'Camera / KYC', 'i18n (EN/AR)'],
+    techColors: ['bg-blue-500/15 text-blue-300', 'bg-violet-500/15 text-violet-300', 'bg-cyan-500/15 text-cyan-300', 'bg-rose-500/15 text-rose-300', 'bg-emerald-500/15 text-emerald-300'],
+    github: 'https://github.com/AbdalrahmanBsharat',
+    gradient: 'from-sky-600/20 to-indigo-600/20',
+    border: 'border-sky-500/20',
+    glow: 'hover:shadow-sky-500/20',
+  },
+  {
+    id: 4,
     title: 'Studify',
     emoji: '🎓',
     badge: 'Main Project',
@@ -19,7 +65,7 @@ const projects = [
     glow: 'hover:shadow-purple-500/20',
   },
   {
-    id: 2,
+    id: 5,
     title: 'TIKITAKA',
     emoji: '⚽',
     badge: 'Sports App',
@@ -34,7 +80,7 @@ const projects = [
     glow: 'hover:shadow-green-500/20',
   },
   {
-    id: 3,
+    id: 6,
     title: 'Note Taking App',
     emoji: '📝',
     badge: 'Productivity',
@@ -49,7 +95,7 @@ const projects = [
     glow: 'hover:shadow-amber-500/20',
   },
   {
-    id: 4,
+    id: 7,
     title: 'Electronics Shop',
     emoji: '🛒',
     badge: 'E-Commerce',
@@ -132,13 +178,13 @@ const Projects = () => (
                     <FiGithub size={16} />
                   </motion.a>
                   <motion.a
-                    href={project.github}
+                    href={project.live ?? project.github}
                     target="_blank"
                     rel="noopener noreferrer"
                     whileHover={{ scale: 1.15 }}
                     whileTap={{ scale: 0.9 }}
                     className="w-9 h-9 flex items-center justify-center rounded-lg bg-white/5 border border-white/10 text-gray-400 hover:text-white hover:border-white/30 transition-all duration-200"
-                    aria-label="View project"
+                    aria-label={project.live ? 'Visit the live site' : 'View project'}
                   >
                     <FiExternalLink size={16} />
                   </motion.a>
